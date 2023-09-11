@@ -1,12 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: border-box;
+    box-sizing: border-box;
 }
 
-html{
+html {
     background-color: rgba(0, 0, 255, 0.2);
-    background-image: url(../image/cloud.jpg);
+    background-image: url(../img/cloud.jpg);
     background-size: cover;
     background-blend-mode: overlay;
     font-size: 16px;
@@ -20,14 +20,14 @@ html{
     font-size: 22px;
 }
 
-body{
+body {
     width: 100%;
     min-height: 100vh;
     flex-direction: column;
     padding: 0.5rem;
 }
 
-main{
+main {
     width: 100%;
     max-width: 700px;
     max-height: 1050px;
@@ -41,30 +41,30 @@ main{
     box-shadow: 1px 1px 2.5px #FFF;
 }
 
-img{
+img {
     display: block;
 }
 
-hr{
+hr {
     width: 90%;
     margin: auto;
     border: 1px solid lightgray;
 }
 
-.none{
+.none {
     display: none;
 }
 
-.block{
+.block {
     display: block;
 }
 
-.offscreen{
+.offscreen {
     position: absolute;
     left: -10000px;
 }
 
-.skip-link{
+.skip-link {
     position: absolute;
     top: -999px;
     left: 0;
@@ -75,12 +75,12 @@ hr{
 }
 
 .skip-link:focus,
-.skip-link:active{
+.skip-link:active {
     top: auto;
     left: auto;
 }
 
-.button{
+.button {
     min-width: 48px;
     min-height: 48px;
     color: #FFF;
@@ -92,28 +92,28 @@ hr{
     background-color: transparent;
 }
 
-.button:hover{
+.button:hover {
     cursor: pointer;
 }
 
 .button:hover,
-.button:focus{
+.button:focus {
     box-shadow: 4px 2px 5px #000;
     border-color: #FFF;
 }
 
-.searchBar{
+.searchBar {
     padding: 0.5rem 0.5rem 1.5rem;
 }
 
-.searchBar_form{
+.searchBar_form {
     display: flex;
     justify-content: space-between;
     border: 2px solid lightgray;
     border-radius: 500px;
 }
 
-.searchBar_text{
+.searchBar_text {
     flex-grow: 1;
     border: none;
     margin-right: 0.25rem;
@@ -125,26 +125,83 @@ hr{
     outline: none;
 }
 
-.searchBar_text::placeholder{
+.searchBar_text::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.searchBar_button{
+.searchBar_button {
     border: none;
 }
 
-.searchBar_button i{
+.searchBar_button i {
     font-size: 1.7rem;
 }
 
 .searchBar_button:hover,
-.searchBar_button:focus{
+.searchBar_button:focus {
     border: none;
     box-shadow: none;
     text-shadow: 4px 2px 5px #000;
 }
 
 .searchBar_form:focus-within,
-.searchBar_form:hover{
+.searchBar_form:hover {
     box-shadow: 4px 2px 5px #000;
+}
+
+.navButtons {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 0.25rem;
+}
+
+.rain {
+    background-color: rgba(0, 0, 255, 0.2);
+    background-image: url("../img/rain.jpg");
+}
+
+.snow {
+    background-color: rgba(0, 0, 255, 0.2);
+    background-image: url("../img/snow.jpg");
+}
+
+.night {
+    background-color: rgba(204, 0, 102, 0.2);
+    background-image: url("../img/night.jpg");
+}
+
+.fog {
+    background-color: darkslategray;
+    background-image: url("../img/fog.jpg");
+}
+
+.clouds {
+    background-color: rgba(0, 0, 255, 0.2);
+    background-image: url("../img/cloud.jpg");
+}
+
+.zero-vis {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fade-in {
+    visibility: visible;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

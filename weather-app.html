@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Weather App</title>
-    <link rel="icon" type="image/icon" href="./image/weatherLogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WEATHER APP</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,15 +15,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./css/weather.css" />
-    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/weather.css" />
+
+    <script src="js/main.js" type="module"></script>
 </head>
 
 <body>
     <main class="fade-in">
-        <h1 class="offscreen">WEATHER APP</h1>
+        <h1 class="offscreen">WEAPHER APP</h1>
 
-        <!--Search Bar-->
+        <!--Секция за търсещо меню-->
         <section id="searchBar" class="searchBar fade-in">
             <form id="searchBar_form" class="searchBar_form" role="search">
                 <label for="searchBar_text" class="offscreen">Enter a new location</label>
@@ -36,9 +38,9 @@
             </form>
         </section>
 
-        <a href="#currentForecast" class="skip-link">Skip to Current Conditions</a>
+        <a href="#cuurentForecast" class="skip-link">Skip to Current Conditions</a>
 
-        <!--Current Forecast-->
+        <!--Секциа за текуща прогноза-->
         <section id="currentForecast" class="currentForecast fade-in" role="region"
             aria-labelledby="currentForecast_location">
             <h2 id="currentForecast_location" class="currentForecast_location">Current Conditions</h2>
@@ -47,7 +49,7 @@
 
         <a href="#dailyForecast" class="skip-link">Skip to Six Day Forecast</a>
 
-        <!--Navigation Button-->
+        <!--Навигационни бутони-->
         <nav id="navButtons" class="navButtons fade-in">
             <button id="getLocation" class="button" title="Get Location"
                 aria-label="Get the current weather conditions for your current location">
@@ -82,9 +84,9 @@
 
         <hr fade-in>
 
-        <!--Six Day Forecast-->
+        <!--Секция за шестдневна прогноза-->
         <section id="dailyForecast" class="dailyForecast fade-in" role="region" aria-labelledby="dailyForecast_title">
-            <h2 id="dailyForecast_title" class="dailyForecast_title">Six Day Forecast</h2>
+            <h2 id="dailyForecast_title" class="dailyForecast_title">Шестдневна прогноза</h2>
             <div id="dailyForecast_contents" class="dailyForecast_contents"></div>
         </section>
         <p id="confirmation" class="offscreen" aria-live="assertive"></p>
